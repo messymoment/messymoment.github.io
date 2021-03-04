@@ -1,0 +1,29 @@
+---
+---
+
+$messyBlue: #0077A5;
+$messyRed: #FA0012;
+
+
+// Carousel
+// .carousel .carousel-item {-webkit-transition: opacity 3s; -moz-transition: opacity 3s; -ms-transition: opacity 3s; -o-transition: opacity 3s; transition: opacity 3s;}
+// .carousel .active.left {left:0;opacity:0;z-index:2;}
+// .carousel .next {left:0;opacity:1;z-index:1;}
+.carousel {
+  margin-bottom: 2ex;
+}
+
+
+h3 {
+  color: $messyBlue;
+  text-transform:uppercase;
+}
+
+//Title-logo
+#messy{color: $messyRed}
+#moment{color: "black"}
+#media{color: $messyBlue}
+
+#logo {
+  max-width: 100%;
+}
