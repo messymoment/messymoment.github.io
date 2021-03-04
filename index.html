@@ -1,1 +1,42 @@
-Test
+---
+layout: default
+title: Home
+---
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {% for index in (0..4) %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <img src="assets/images/carousel/car{{index}}.jpg" class="d-block w-100" alt="...">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md">
+        <h3>Our Project</h3>
+        <p class="justify">
+            Real life, like real journalism, is messy. Capturing its complexity is the mission of Messy Moment Media. We try to tell our stories through the voice of those who are seldom heard . The results speak for themselves. We’ve produced gripping nonfiction television from the world’s hotspots to its most  remote corners,  while winning 8 Emmys.
+        </p>
+    </div>
+    <div class="col-md">
+        <h3>Our People</h3>
+        <p class="justify">
+            Messy Moment Media was founded by Producer/Director Andrew Tkach in 2011. For over 25 years, he’s produced documentaries and tv magazine features for just about everyone in the broadcast media’s alphabet soup : NBC, CBS, ABC, CNN, PBS, NAT GEO, AL JAZ, and HD NET.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md">
+        <h3>Our Programs</h3>
+        <p class="justify">
+            In Our Shows please view our versions of programs we produced for various broadcasters, solely as examples of our work.
+        </p>
+    </div>
+    <div class="col-md">
+        <h3>Contacts</h3>
+        <p class="justify">
+            messymomentmedia@gmail.com
+        </p>
+    </div>
+</div>
