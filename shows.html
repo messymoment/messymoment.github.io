@@ -3,8 +3,6 @@ layout: default
 title: Our Shows
 ---
 
-{{ site.posts | inspect }}
-
 {% for post in site.posts %}
     {% capture video_id %}{{ post.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% endcapture %}
     <div class="row">
