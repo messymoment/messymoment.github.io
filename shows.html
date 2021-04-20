@@ -3,16 +3,14 @@ layout: default
 title: Our Shows
 ---
 
-{% for post in site.posts %}
-    {% capture video_id %}{{ post.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% endcapture %}
-    <div class="row">
-        <div class="col">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
-        </div>
-      <div class="col">
-          <h3>{{ post.title }}</a></h2>
-          <p>{{ post.content }}</p>
-          <p><a href="https://youtu.be/{{ video_id }}">Watch</a></p>
-      </div>
-    </div>
+{% for show in site.shows %}
+    {% if show.featured %}
+        {% include show.html show=show %}
+    {% endif %}
+{% endfor %}
+
+{% for show in site.shows %}
+    {% unless show.featured %}
+        {% include show.html show=show %}
+    {% endunless %}
 {% endfor %}
