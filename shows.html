@@ -3,13 +3,13 @@ layout: default
 title: Our Shows
 ---
 
-{% for show in site.shows %}
+{% for show in site.shows reversed %}
     {% if show.featured %}
         {% include show.html show=show %}
     {% endif %}
 {% endfor %}
 
-{% for show in site.shows %}
+{% for show in site.shows reversed %}
     {% unless show.featured %}
         {% include show.html show=show %}
     {% endunless %}
